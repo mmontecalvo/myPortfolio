@@ -10,10 +10,11 @@ import logo9 from '../img/technologies/React.svg';
 import logo10 from '../img/technologies/npm.svg';
 import logo11 from '../img/technologies/Material UI (MUI).svg';
 import logo12 from '../img/technologies/Figma.svg';
+import logo13 from '../img/technologies/Firebase.svg';
 
 function Carrousel() {
 
-    const gallery = [logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9, logo10, logo11, logo12];
+    const gallery = [logo1, logo2, logo3, logo4, logo5, logo6, logo7, logo8, logo9, logo10, logo11, logo12, logo13];
 
     return (
         <div className="carrousel">
