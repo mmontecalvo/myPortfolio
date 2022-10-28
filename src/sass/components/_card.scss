@@ -1,0 +1,70 @@
+.card {
+    @include flex(column, flex-start, center, $spacing-s);
+    padding: $spacing-m;
+    width: 28rem;
+    height: 40rem;
+    border-radius: 7rem 1rem / 12rem 9rem;
+    background: $color-text;
+    box-shadow: 0.3rem 0.3rem 0 $color-effect1, 
+                0.6rem 0.6rem 0 $color-effect2, 
+                0.9rem 0.9rem 0 $color-effect3, 
+                1.2rem 1.2rem 0 $color-effect4, 
+                1.5rem 1.5rem 0 $color-effect5, 
+                1.8rem 1.8rem 0 $color-shadow, 
+                2.1rem 2.1rem 0 $color-shadow, 
+                2.4rem 2.4rem 0 $color-shadow, 
+                2.7rem 2.7rem 0 $color-shadow;
+    position: relative;
+    overflow: hidden;
+    transition: all 0.5s ease;
+
+    &:hover {
+        border-radius: 0;
+    }
+
+    .card__img {
+        @include flex(row, center, center, 0);
+        position: absolute;
+        top: 0;
+        height: 18rem;
+        width: 100%;
+        clip-path: polygon(0 0, 100% 0, 100% 100%, 0 94%);
+
+        img {
+            height: 100%;
+        }
+    }
+
+    .card__info {
+        margin-top: 17rem;
+
+        .info__name {
+            @include text($color-bg, $text-l, 400, left, 1em);
+            width: 100%;
+        }
+
+        .info__text{
+            @include text($color-bg, $text-base, 400, justify, 1em);
+            hyphens: auto;
+            margin-top: $spacing-s;
+            filter: sepia(1);
+        }
+    }
+
+    .card__links {
+        @include flex(row, center, center, $spacing-m);
+        position: absolute;
+        bottom: 0.5rem;
+
+        .link {
+            font-size: $text-xxl;
+            color: $color-bg;
+            transition: all 0.1s ease; 
+
+            &:hover {
+                transform: scale(1.2);
+                filter: sepia(1);
+            }
+        }
+    }
+}

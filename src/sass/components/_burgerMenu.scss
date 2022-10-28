@@ -1,0 +1,68 @@
+input[type = "checkbox"] {
+    display: none;
+    visibility: hidden;
+    @include flex(column, center, center, $spacing-l);
+}
+  
+.bar {
+    position: relative;
+    cursor: pointer;
+    width: 36px;
+    height: 30px;
+}
+  
+.bar span {
+    position: absolute;
+    width: 36px;
+    height: 5px;
+    background-color: $color-text;
+    border-radius: 7rem 1rem / 12rem 9rem;
+    box-shadow: 0.1rem 0.1rem 0 $color-effect1, 
+                    0.2rem 0.2rem 0 $color-effect2, 
+                    0.3rem 0.3rem 0 $color-effect3, 
+                    0.4rem 0.4rem 0 $color-effect4, 
+                    0.5rem 0.5rem 0 $color-effect5, 
+                    0.6rem 0.6rem 0 $color-shadow, 
+                    0.7rem 0.7rem 0 $color-shadow, 
+                    0.8rem 0.8rem 0 $color-shadow, 
+                    0.9rem 0.9rem 0 $color-shadow;
+    display: inline-block;
+    transition: 0.3s ease;
+    left: 0;
+}
+  
+.bar span.top {
+    top: 0;
+}
+  
+.bar span.middle {
+    top: 12px;
+}
+  
+.bar span.bottom {
+    bottom: 0;
+}
+  
+input[type]:checked ~ span.top {
+    transform: rotate(45deg);
+    transform-origin: top left;
+    width: 34px;
+    left: 5px;
+}
+  
+input[type]:checked ~ span.bottom {
+    transform: rotate(-45deg);
+    transform-origin: top left;
+    width: 34px;
+    bottom: -1px;
+    box-shadow: 0.1rem 0.1rem 0 $color-effect1, 
+                    0.2rem 0.2rem 0 $color-effect2, 
+                    0.3rem 0.3rem 0 $color-effect3, 
+                    0.4rem 0.4rem 0 $color-effect4, 
+                    0.5rem 0.5rem 0 $color-effect5, 
+}
+  
+input[type]:checked ~ span.middle {
+    transform: translateX(-20px);
+    opacity: 0;
+}

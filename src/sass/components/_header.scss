@@ -1,0 +1,81 @@
+.mainHeader {
+    position: fixed;
+    top: 0;
+    @include flex(row, center, center, 0);
+    padding: $spacing-s;
+    width: 100vw;
+    height: 6.6rem;
+    background: $color-bg;
+    border-bottom: $b-desktop solid $color-shadow;
+    z-index: 10000;
+
+    .header {
+        @include flex(row, space-between, center, 0);
+        width: 100%;
+        max-width: 1320px;
+
+        .header__logo {
+            a {
+                color: $color-text;
+                font-size: 24px;
+                display: block;
+                font-family: monospace;
+                white-space: nowrap;
+                border-right: 0.4rem solid;
+                width: 27ch;
+                animation: typing 2s steps(26), blink .5s infinite step-end alternate;
+                overflow: hidden;
+            }
+        }
+
+        .header__menu {
+            @include flex(row, flex-end, center, $spacing-l);
+            padding-right: $spacing-l;
+        }
+
+        .disabled {
+            display: none;
+        }
+    }
+}
+
+@keyframes typing {
+    from { width: 0 }
+}
+
+@keyframes blink {
+    50% { border-color: transparent }
+}
+
+@media screen and (max-width: 1020px){
+    .mainHeader {
+        .header {
+            .header__burgerMenu {
+                display: block;
+            }
+
+            .header__menu {
+                @include flex(column, center, center, $spacing-l);
+                position: absolute;
+                top: 6.6rem;
+                width: 100vw;
+                background-color: $color-bg;
+                padding: $spacing-l;
+                border-bottom: $b-desktop solid $color-shadow;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+    .mainHeader {
+        .header {
+            .header__logo {
+                a {
+                    font-size: 18px;
+                    width: 27ch;
+                }
+            }
+        }
+    }
+}

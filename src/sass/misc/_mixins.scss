@@ -1,0 +1,15 @@
+@mixin flex($dir, $just, $alig, $gap){
+    display: flex;
+    flex-direction: $dir;
+    justify-content: $just;
+    align-items: $alig;
+    gap: $gap;
+}
+
+@mixin text($color, $size, $weight, $talig, $lh){
+   color: $color;
+   font-size: $size;
+   weight: $weight;
+   text-align: $talig;
+   line-height: $lh;
+}

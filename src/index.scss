@@ -1,0 +1,21 @@
+/* MISC */
+
+@import './sass/misc/mixins';
+@import './sass/misc/variables';
+@import './sass/misc/normalize';
+
+/* COMPONENTS */
+
+@import './sass/components/header';
+@import './sass/components/button';
+@import './sass/components/burgerMenu';
+@import './sass/components/carrousel';
+@import './sass/components/card';
+
+/* CONTAINERS */
+
+@import './sass/containers/home';
+@import './sass/containers/aboutMe';
+@import './sass/containers/proyects';
+@import './sass/containers/contact';
+@import './sass/containers/page404';

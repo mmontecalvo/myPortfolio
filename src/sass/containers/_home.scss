@@ -1,0 +1,108 @@
+.home {
+    @include flex(column, center, center, $spacing-m);
+    
+
+    .home__content {
+        position: relative;
+
+        .content__text {
+            font-size: 10rem;
+            text-align: left;
+            color: $color-text;
+            background: $color-bg;
+            font-family: $font-text;
+            text-shadow: 0.3rem 0.3rem 0 $color-shadow, 
+                    0.6rem 0.6rem 0 $color-shadow, 
+                    0.9rem 0.9rem 0 $color-shadow, 
+                    1.2rem 1.2rem 0 $color-shadow, 
+                    1.5rem 1.5rem 0 $color-shadow;
+               
+            .text__effect {
+                font-size: 15rem;
+                font-family: $font-title;
+                text-shadow: 0.3rem 0.3rem 0 $color-effect1, 
+                        0.6rem 0.6rem 0 $color-effect2, 
+                        0.9rem 0.9rem 0 $color-effect3, 
+                        1.2rem 1.2rem 0 $color-effect4, 
+                        1.5rem 1.5rem 0 $color-effect5, 
+                        1.8rem 1.8rem 0 $color-shadow, 
+                        2.1rem 2.1rem 0 $color-shadow, 
+                        2.4rem 2.4rem 0 $color-shadow, 
+                        2.7rem 2.7rem 0 $color-shadow;
+            }
+        }
+    
+        .content__image {
+            position: absolute;
+            right: 0;
+            top: 0;
+            margin-top: $spacing-s;
+            border-radius: 7rem 1rem / 12rem 9rem;
+    
+            img {
+                height: 24rem;
+                border-radius: 7rem 1rem / 12rem 9rem;
+                filter: sepia(100%);
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1020px){
+    .home {
+        .home__content {
+            .content__text {
+                font-size: 8rem;
+                   
+                .text__effect {
+                    font-size: 12rem;
+                }
+            }
+        
+            .content__image {
+                img {
+                    height: 20rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 799px){
+    .home {
+        .home__content {
+            .content__text {
+                font-size: 6rem;
+                   
+                .text__effect {
+                    font-size: 10rem;
+                }
+            }
+        
+            .content__image {
+                img {
+                    height: 18rem;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 600px){
+    .home {
+        .home__content {
+            .content__text {
+                font-size: 5rem;
+                text-align: center;
+                   
+                .text__effect {
+                    font-size: 8rem;
+                }
+            }
+        
+            .content__image {
+                display: none;
+            }
+        }
+    }
+}

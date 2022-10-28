@@ -1,0 +1,28 @@
+.page404 {
+    min-height: 100vh;
+    @include flex(column, center, center, $spacing-l*2);
+
+    .page404__title {
+        @include text($color-text, 30rem, 400, center, 0.7em);
+        font-family: $font-title;
+        text-shadow: 0.3rem 0.3rem 0 $color-effect1, 
+                0.6rem 0.6rem 0 $color-effect2, 
+                0.9rem 0.9rem 0 $color-effect3, 
+                1.2rem 1.2rem 0 $color-effect4, 
+                1.5rem 1.5rem 0 $color-effect5, 
+                1.8rem 1.8rem 0 $color-shadow, 
+                2.1rem 2.1rem 0 $color-shadow, 
+                2.4rem 2.4rem 0 $color-shadow, 
+                2.7rem 2.7rem 0 $color-shadow;
+    }
+
+    .page404__text {
+        max-width: 60rem;
+        @include text($color-text, $text-xxl, 400, center, 1em);
+        text-shadow: 0.1rem 0.1rem 0 $color-shadow, 
+                0.2rem 0.2rem 0 $color-shadow, 
+                0.3rem 0.3rem 0 $color-shadow, 
+                0.4rem 0.4rem 0 $color-shadow, 
+                0.5rem 0.5rem 0 $color-shadow;
+    }
+}

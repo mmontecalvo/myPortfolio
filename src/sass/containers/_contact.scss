@@ -1,0 +1,151 @@
+.contact {
+    @include flex(column, center, center, $spacing-l*1.5);
+
+    .contact__title {
+        @include text($color-text, 10em, 400, center, 1em);
+        font-family: $font-title;
+        text-shadow: 0.3rem 0.3rem 0 $color-effect1, 
+        0.6rem 0.6rem 0 $color-effect2, 
+        0.9rem 0.9rem 0 $color-effect3, 
+        1.2rem 1.2rem 0 $color-effect4, 
+        1.5rem 1.5rem 0 $color-effect5, 
+        1.8rem 1.8rem 0 $color-shadow, 
+        2.1rem 2.1rem 0 $color-shadow, 
+        2.4rem 2.4rem 0 $color-shadow, 
+        2.7rem 2.7rem 0 $color-shadow;
+    }
+
+    .contact__ways {
+        @include flex(row, center, center, $spacing-m);
+
+        .ways__icon {
+            opacity: 0.7;
+            color: $color-text;
+            font-size: $text-xxl*1.5;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            &:hover {
+                opacity: 1;
+                transform: scale(1.2);
+            }
+        }
+    }
+
+    .contact__form {
+        @include flex(column, center, center, $spacing-m);
+
+        .form__to {
+            @include flex(row, flex-start, center, $spacing-s);
+            height: 5rem;
+            width: 60rem;
+            max-width: 96vw;
+            border-radius: 7rem 1rem / 12rem 9rem;
+            padding: $spacing-m;
+            background-color: $color-text;
+            border: none;
+            opacity: 0.7;
+
+            .to__icon {
+                opacity: 0.7;
+                color: $color-bg;
+                font-size: $text-xxl;
+                cursor: pointer;
+                transition: all 0.3s ease;
+
+                &:hover {
+                    opacity: 1;
+                    transform: scale(1.2);
+                }
+            }
+
+            .to__email {
+                @include text($color-bg, $text-m, 400, left, 1em);
+            }
+        }
+
+        .form__write {
+            @include flex(column, center, center, $spacing-m);
+
+            .write__floating {
+                .floating__input {
+                    @include text($color-bg, $text-m, 400, left, 1em);
+                    height: 5rem;
+                    width: 60rem;
+                    max-width: 96vw;
+                    border-radius: 7rem 1rem / 12rem 9rem;
+                    padding: $spacing-m;
+                    background-color: $color-text;
+                    border: none;
+                    opacity: 0.7;
+
+                    &::placeholder {
+                        color: $color-shadow;
+                    }
+
+                    &:focus {
+                        opacity: 1;
+                        outline: none;
+                        box-shadow: 0.3rem 0.3rem 0 $color-shadow, 
+                        0.6rem 0.6rem 0 $color-shadow, 
+                        0.9rem 0.9rem 0 $color-shadow, 
+                        1.2rem 1.2rem 0 $color-shadow, 
+                        1.5rem 1.5rem 0 $color-shadow;;
+                    }
+                }
+
+                .floating__input--text-area {
+                    @include text($color-bg, $text-m, 400, left, 1em);
+                    font-family: $font-text;
+                    height: 20rem;
+                    resize: none;
+                    border-radius: 2rem 0.4rem / 4.8rem 3.6rem;
+                    
+                    &::placeholder {
+                        font-family: $font-text;
+                    }
+                }
+            }
+        }
+
+        .form__send {
+            height: auto;
+            width: auto;
+            padding: $spacing-s;
+            margin: $spacing-l 0;
+        }
+    }
+}
+
+@media screen and (max-width: 1020px){
+    .contact{
+        @include flex(column, flex-start, center, $spacing-l*1.5);
+        margin-top: 7.2rem;
+        min-height: auto;
+    }
+}
+
+@media screen and (max-width: 600px){
+    .contact {
+        @include flex(column, flex-start, center, $spacing-l);
+
+        .contact__title {
+            @include text($color-text, 8rem, 400, center, 1em);
+            text-shadow: 0.2rem 0.2rem 0 $color-effect1, 
+                        0.4rem 0.4rem 0 $color-effect2, 
+                        0.6rem 0.6rem 0 $color-effect3, 
+                        0.8rem 0.8rem 0 $color-effect4, 
+                        1rem 1rem 0 $color-effect5, 
+                        1.2rem 1.2rem 0 $color-shadow, 
+                        1.4rem 1.4rem 0 $color-shadow, 
+                        1.6rem 1.6rem 0 $color-shadow, 
+                        1.8rem 1.8rem 0 $color-shadow;
+        }
+
+        .contact__ways {
+            .ways__icon {
+                font-size: $text-xxl*1.2;
+            }
+        }
+    }
+}

@@ -1,0 +1,38 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    font-size: 62.5%;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: $font-text;
+    background: $color-bg;
+    color: $color-text;
+    overflow-x: hidden;
+}
+
+ul{
+    list-style-type: none;
+}
+
+a{
+    text-decoration: none;
+}
+
+.mainContent {
+    @include flex(column, center, center, $spacing-m);
+    max-width: 1320px;
+    margin: 6.6rem auto 0;
+    min-height: calc(100vh - 6.6rem);
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    0% { opacity: 0 };
+    100% { opacity: 1 };
+}
