@@ -33,7 +33,7 @@ function Proyects() {
             description: "Proyecto realizado para el curso de React Js - Coderhouse. El sitio web es un e-commerce, donde se puede filtrar los productos por categorías, ver cada uno en detalle y agregarlos al carrito o eliminarlos del mismo.",
             image: "/img/proyects/lascondes.png",
             ghLink: "https://github.com/mmontecalvo/montecalvo-lascondes",
-            webLink: "",
+            webLink: "https://lascondes.netlify.app/",
         }
     ]
 
